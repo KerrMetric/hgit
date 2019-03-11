@@ -2,6 +2,8 @@ import System.Process
 import System.IO
 import Data.List
 
+import Model.Commands
+
 main = do
     (_,out,_,_) <- runInteractiveProcess "git" ["help"] Nothing Nothing
     contents <- hGetContents out
